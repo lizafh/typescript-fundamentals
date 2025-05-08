@@ -38,30 +38,30 @@ return concatArrays;
 
 
 class Vehicle{
-   private make:string;
+   private _make:string;
    public year:number;
 
-   constructor( make:string,  year:number){
- this.make=make;
+  constructor( _make:string,  year:number){
+ this._make= _make;
  this.year = year;
 
    }
 getInfo(){
-   console.log(`Make: ${this.make}, Year: ${this.year}`) 
+   console.log(`Make: ${this._make}, Year: ${this.year}`) 
 }
 
 }
 
 class Car extends Vehicle{
-    public model:string;
-    constructor(make:string,  year:number,model:string){
+    private _model:string;
+    constructor(_make:string,  year:number,_model:string){
        
-        super(make, year)
-        this.model=model;
+        super(_make, year)
+        this._model=_model;
 
     }
     getModel(){
-        console.log(`Model: ${this.model}`)
+        console.log(`Model: ${this._model}`)
     }
 }
 
